@@ -3,16 +3,16 @@
 
   <!-- ========= Define the main properties of this project ========= -->
   <!-- Define the SonarQube properties -->
-  <!--<property name="sonar.projectKey" value="org.codehaus.sonar:example-java-ant-modules-same-structure" />
+  <property name="sonar.projectKey" value="org.codehaus.sonar:example-java-ant-modules-same-structure" />
   <property name="sonar.projectName" value="Multi-module Java Project analyzed with the Sonar Ant Task (same structure for every module)" />
   <property name="sonar.projectVersion" value="1.0" />
   <property name="sonar.language" value="java" />
   <property name="sonar.sources" value="src/java" />
   <property name="sonar.binaries" value="build/bin" />
-  <property name="sonar.sourceEncoding" value="UTF-8" />-->
+  <property name="sonar.sourceEncoding" value="UTF-8" />
   
   <!-- Set modules IDs -->
-  <!--<property name="sonar.modules" value="module-one,module-two"/>-->
+  <property name="sonar.modules" value="module-one,module-two"/>
   
   <!-- Override some properties at module level -->
   <property name="module-one.sonar.projectName" value="Module One" />
@@ -45,10 +45,10 @@
     </taskdef>
     
 	<!-- Execute SonarQube -->
-	<!--<sonar:sonar />-->
+	<sonar:sonar />
   </target>
 
   <!-- ========= The main target "all" ========= -->  
-  <target name="all" depends="clean,compile"/>
+  <target name="all" depends="clean,compile,sonar"/>
 
 </project>
